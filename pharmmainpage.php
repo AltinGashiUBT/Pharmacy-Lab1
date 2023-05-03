@@ -39,7 +39,11 @@ body {font-family:Arial;}
 	$result=$conn->query($sql);
 	$row=$result->fetch_row();
 	
-	$ename=$row[0];
+	if (!empty($row1) && isset($row1[0])) {
+		$ename = $row1[0];
+	} else {
+		$ename = 'default';
+	}
 		
 	?>
 
