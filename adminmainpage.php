@@ -18,8 +18,8 @@ Admin Dashboard
 			<i class="down"></i>
 			</button>
 			<div class="dropdown-container">
-				<a href="#">Add New Medicine</a>
-				<a href="#">Manage Inventory</a>
+				<a href="inventory-add.php">Add New Medicine</a>
+				<a href="inventory-view.php">Manage Inventory</a>
 			</div>
 			<button class="dropdown-btn">Suppliers
 			<i class="down"></i>

@@ -19,7 +19,7 @@ body {font-family:Arial;}
 
 			<a href="pharmmainpage.php">Dashboard</a>
 			
-			<a href="#">View Inventory</a>
+			<a href="pharm-inventory.php">View Inventory</a>
 			<a href="#">Add New Sale</a>
 			<button class="dropdown-btn">Customers
 			<i class="down"></i>
