@@ -25,8 +25,8 @@ Admin Dashboard
 			<i class="down"></i>
 			</button>
 			<div class="dropdown-container">
-				<a href="#">Add New Supplier</a>
-				<a href="#">Manage Suppliers</a>
+				<a href="supplier-add.php">Add New Supplier</a>
+				<a href="supplier-view.php">Manage Suppliers</a>
 			</div>
 			<button class="dropdown-btn">Employees
 			<i class="down"></i>
