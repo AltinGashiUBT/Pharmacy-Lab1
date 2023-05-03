@@ -58,7 +58,11 @@ Inventory
 	$result1=$conn->query($sql1);
 	$row1=$result1->fetch_row();
 	
-	$ename=$row1[0];
+	if ($row1 !== null && isset($row1[0])) {
+		$ename = $row1[0];
+	} else {
+		$ename = 'default';
+	}
 		
 	?>
 
