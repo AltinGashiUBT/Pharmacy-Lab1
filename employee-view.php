@@ -2,12 +2,11 @@
 <html>
 
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="nav2.css">
-<link rel="stylesheet" type="text/css" href="form4.css">
+<link rel="stylesheet" type="text/css" href="table1.css">
 <title>
-Suppliers
+Employees
 </title>
 </head>
 
@@ -16,7 +15,7 @@ Suppliers
 <div class="sidenav">
 			<h2 style="font-family:Arial; color:white; text-align:center;"> Pharmacy </h2>
 
-			<a href="adminmainpage.php">Dashboard</a>
+			<a href="adminmainpage.php">Dashboardsss</a>
 			<button class="dropdown-btn">Inventory
 			<i class="down"></i>
 			</button>
@@ -36,7 +35,7 @@ Suppliers
 			</button>
 			<div class="dropdown-container">
 				<a href="employee-add.php">Add New Employee</a>
-				<a href="employee-view.ph[">Manage Employees</a>
+				<a href="employee-view.php">Manage Employees</a>
 			</div>
 			<button class="dropdown-btn">Customers
 			<i class="down"></i>
@@ -53,75 +52,63 @@ Suppliers
 	
 	<center>
 	<div class="head">
-	<h2> ADD SUPPLIER DETAILS</h2>
+	<h2> EMPLOYEE LIST</h2>
 	</div>
 	</center>
-
 	
-	
-	<div class="one row">
-		
-			<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
-				<div class="column">
-					<p>
-						<label for="sid">Supplier ID:</label><br>
-						<input type="number" name="sid">
-					</p>
-					<p>
-						<label for="sname">Supplier Company Name:</label><br>
-						<input type="text" name="sname">
-					</p>
-					<p>
-						<label for="sadd">Address:</label><br>
-						<input type="text" name="sadd">
-					</p>
-					
-					
-				</div>
-				<div class="column">
-					<p>
-						<label for="sphno">Phone Number:</label><br>
-						<input type="number" name="sphno">
-					</p>
-					
-					<p>
-						<label for="smail">Email Address </label><br>
-						<input type="text" name="smail">
-					</p>
-					
-				</div>
-				
-			
-			<input type="submit" name="add" value="Add Supplier">
-			</form>
-		<br>
-		
+	<table align="right" id="table1" style="margin-right:20px;">
+		<tr>
+			<th>Employee ID</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Date of Birth</th>
+			<th>Age</th>
+			<th>Sex</th>
+			<th>Employee Type</th>
+			<th>Date of Joining</th>
+			<th>Salary</th>
+			<th>Phone Number</th>
+			<th>Email Address</th>
+			<th>Home Address</th>
+			<th>Action</th>
+		</tr>
 		
 	<?php
-			include "config.php";
-			 
-			if(isset($_POST['add']))
-			{
-			$id = mysqli_real_escape_string($conn, $_REQUEST['sid']);
-			$name = mysqli_real_escape_string($conn, $_REQUEST['sname']);
-			$add = mysqli_real_escape_string($conn, $_REQUEST['sadd']);
-			$phno = mysqli_real_escape_string($conn, $_REQUEST['sphno']);
-			$mail = mysqli_real_escape_string($conn, $_REQUEST['smail']);
+	
+	include "config.php";
+	$sql = "SELECT e_id, e_fname, e_lname, bdate, e_age, e_sex, e_type, e_jdate, e_sal, e_phno, e_mail, e_add FROM employee where e_id<>1";
+	$result = $conn->query($sql);
+	
+	if ($result->num_rows > 0) {
+	
+	while($row = $result->fetch_assoc()) {
 
-			 
-			$sql = "INSERT INTO suppliers VALUES ($id, '$name','$add',$phno, '$mail')";
-			if(mysqli_query($conn, $sql)){
-				echo "<p style='font-size:8;'>Supplier details successfully added!</p>";
-			} else{
-				echo "<p style='font-size:8; color:red;'>Error! Check details.</p>";
-			}
-			}
-			 
-			$conn->close();
+	echo "<tr>";
+		echo "<td>" . $row["e_id"]. "</td>";
+		echo "<td>" . $row["e_fname"] . "</td>";
+		echo "<td>" . $row["e_lname"] . "</td>";
+		echo "<td>" . $row["bdate"] . "</td>";
+		echo "<td>" . $row["e_age"]. "</td>";
+		echo "<td>" . $row["e_sex"]. "</td>";
+		echo "<td>" . $row["e_type"]. "</td>";
+		echo "<td>" . $row["e_jdate"]. "</td>";
+		echo "<td>" . $row["e_sal"]. "</td>";
+		echo "<td>" . $row["e_phno"]. "</td>";
+		echo "<td>" . $row["e_mail"]. "</td>";
+		echo "<td>" . $row["e_add"]. "</td>";
+		echo "<td align=center>";
+		echo "<a class='button1 edit-btn' href=employee-update.php?id=".$row['e_id'].">Edit</a>";
+		echo "<a onclick='return confirm('Are you sure to delete?');' class='button1 del-btn' href=employee-delete.php?id=".$row['e_id'].">Delete</a>";
+		echo "</td>";
+	echo "</tr>";
+	}
+	echo "</table>";
+} 
+
+	$conn->close();
+	
 	?>
 	
-	</div>
-			
 </body>
 
 <script>
@@ -144,3 +131,4 @@ Suppliers
 </script>
 
 </html>
+

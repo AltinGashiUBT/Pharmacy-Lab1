@@ -44,8 +44,8 @@ Inventory
 			<i class="down"></i>
 			</button>
 			<div class="dropdown-container">
-				<a href="pharm-customer.php">Add New Customer</a>
-				<a href="pharm-customer-view.php">View Customers</a>
+				<a href="#">Add New Customer</a>
+				<a href="#">View Customers</a>
 			</div>
 	</div>
 

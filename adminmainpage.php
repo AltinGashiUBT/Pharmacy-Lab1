@@ -32,8 +32,8 @@ Admin Dashboard
 			<i class="down"></i>
 			</button>
 			<div class="dropdown-container">
-				<a href="#">Add New Employee</a>
-				<a href="#">Manage Employees</a>
+				<a href="employee-add.php">Add New Employee</a>
+				<a href="employee-view.php">Manage Employees</a>
 			</div>
 			<button class="dropdown-btn">Customers
 			<i class="down"></i>
