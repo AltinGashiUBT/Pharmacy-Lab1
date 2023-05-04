@@ -20,13 +20,12 @@ body {font-family:Arial;}
 			<a href="pharmmainpage.php">Dashboard</a>
 			
 			<a href="pharm-inventory.php">View Inventory</a>
-			<a href="#">Add New Sale</a>
 			<button class="dropdown-btn">Customers
 			<i class="down"></i>
 			</button>
 			<div class="dropdown-container">
-				<a href="#">Add New Customer</a>
-				<a href="#">View Customers</a>
+				<a href="pharm-customer.php">Add New Customer</a>
+				<a href="pharm-customer-view.php">View Customers</a>
 			</div>
 	</div>
 	
@@ -39,11 +38,7 @@ body {font-family:Arial;}
 	$result=$conn->query($sql);
 	$row=$result->fetch_row();
 	
-	if (!empty($row1) && isset($row1[0])) {
-		$ename = $row1[0];
-	} else {
-		$ename = 'default';
-	}
+	$ename=$row[0];
 		
 	?>
 
