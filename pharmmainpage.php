@@ -52,7 +52,7 @@ body {font-family:Arial;}
 	</div>
 	</center>
 	
-	<a href="pharm-pos1.php" title="Add New Sale">
+	<a href="#" title="Add New Sale">
 	<img src="carticon1.png" style="padding:8px;margin-left:550px;margin-top:40px;width:200px;height:200px;border:2px solid black;" alt="Add New Sale">
 	</a>
 	

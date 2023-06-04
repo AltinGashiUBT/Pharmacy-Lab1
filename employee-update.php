@@ -54,8 +54,8 @@ Employees
 			<i class="down"></i>
 			</button>
 			<div class="dropdown-container">
-				<a href="#">Add New Customer</a>
-				<a href="#">Manage Customers</a>
+				<a href="customer-add.php">Add New Customer</a>
+				<a href="customer-view.php">Manage Customers</a>
 			</div>
 	</div>
 

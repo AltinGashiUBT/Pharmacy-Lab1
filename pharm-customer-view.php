@@ -39,7 +39,6 @@ Customers
 			<a href="pharmmainpage.php">Dashboard</a>
 			
 			<a href="pharm-inventory.php">View Inventory</a>
-			<a href="pharm-pos1.php">Add New Sale</a>
 			<button class="dropdown-btn">Customers
 			<i class="down"></i>
 			</button>
