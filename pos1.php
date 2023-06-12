@@ -51,7 +51,17 @@ New Sales
 				<a href="customer-add.php">Add New Customer</a>
 				<a href="customer-view.php">Manage Customers</a>
 			</div>
+			<a href="sales-view.php">View Sales Invoice Details</a>
+			<a href="salesitems-view.php">View Sold Products Details</a>
 			<a href="pos1.php">Add New Sale</a>
+			<button class="dropdown-btn">Reports
+			<i class="down"></i>
+			</button>
+			<div class="dropdown-container">
+				<a href="stockreport.php">Medicines - Low Stock</a>
+				<a href="expiryreport.php">Medicines - Soon to Expire</a>
+				<a href="salesreport.php">Transactions Reports</a>
+			</div>
 	</div>
 
 	<div class="topnav">

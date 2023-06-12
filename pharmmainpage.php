@@ -17,9 +17,10 @@ body {font-family:Arial;}
 	<div class="sidenav">
 	<h2 style="font-family:Arial; color:white; text-align:center;"> Pharmacy </h2>
 
-			<a href="pharmmainpage.php">Dashboard</a>
+	<a href="pharmmainpage.php">Dashboard</a>
 			
 			<a href="pharm-inventory.php">View Inventory</a>
+			<a href="pharm-pos1.php">Add New Sale</a>
 			<button class="dropdown-btn">Customers
 			<i class="down"></i>
 			</button>
@@ -52,7 +53,7 @@ body {font-family:Arial;}
 	</div>
 	</center>
 	
-	<a href="#" title="Add New Sale">
+	<a href="pharm-pos1.php" title="Add New Sale">
 	<img src="carticon1.png" style="padding:8px;margin-left:550px;margin-top:40px;width:200px;height:200px;border:2px solid black;" alt="Add New Sale">
 	</a>
 	
